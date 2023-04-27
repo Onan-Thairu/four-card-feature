@@ -47,9 +47,8 @@
   align-items: center;
 }
 .card {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   padding: 1.5rem;
-  /* height: 200px; */
   border-radius: 8px;
   flex: 1;
   flex-basis: 0;
@@ -69,8 +68,13 @@
 }.card-4 {
   border-top: 5px solid hsl(212, 86%, 64%);
 }
+.card-icon {
+  display: flex;
+  justify-content: flex-end;
+}
 .card img {
   width: 40px;
+  margin-top: 1rem;
 }
 .card-heading {
   color: hsl(234, 12%, 34%);
@@ -81,5 +85,36 @@
   font-size: .8rem;
   margin-bottom: 2rem;
 }
+
+/* Apply styles when screen width is less than or equal to 600px */
+@media (max-width: 900px) {
+  .header {
+    max-width: 450px;
+  }
+  .container {
+    width: 99vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin: auto;
+  }
+  .cards {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
